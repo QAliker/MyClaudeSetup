@@ -1,9 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "QT-claude-kit",
-  "version": "0.7.0",
-  "description": "Quentin's personal Claude Code kit: specialized agents and skills (and later commands, hooks, scripts) for dev workflows.",
+  "version": "0.10.0",
+  "description": "Quentin's personal Claude Code kit: specialized agents, skills, commands, opt-in rules, and hooks for dev workflows.",
   "author": {
     "name": "Quentin"
-  }
+  },
+  "hooks": "./hooks/hooks.json"
 }

@@ -1,6 +1,6 @@
 # QT-claude-kit
 
-Quentin's personal Claude Code kit. Portable plugin: agents, skills, and commands (hooks + scripts later).
+Quentin's personal Claude Code kit. Portable plugin: agents, skills, commands, opt-in rules, and hooks (scripts later).
 
 ## Agents
 
@@ -41,6 +41,27 @@ Auto-loaded by trigger; no manual invocation needed.
 | `docker-patterns` | Writing a Dockerfile / image build |
 | `deployment-patterns` | Shipping to prod — rollout, rollback, health, config |
 
+## Rules (opt-in)
+
+Always-on conventions. **Not auto-loaded** — wire them into `~/.claude/CLAUDE.md`
+with `@import` (see `rules/README.md`). Anything recognition-gated lives in a skill instead.
+
+| Rule | Covers |
+|---|---|
+| `common/skill-index` | Trigger→skill map + security non-negotiables (covers trigger-miss) |
+| `common/coding-style` | Immutability, file organization |
+| `common/git-workflow` | Commit format, PR process |
+| `common/performance` | Model selection, context management |
+
+## Hooks
+
+Auto-loaded with the plugin. Mechanical guards only — judgment calls stay skills.
+
+| Hook | Event | Does |
+|---|---|---|
+| `commit-guard` | PreToolUse (Bash) | Blocks `git commit`/`git push` — the human commits, not the agent |
+| `auto-format` | PostToolUse (Edit/Write) | Formats the edited file if a formatter is installed (prettier only when configured); never fails the edit |
+
 ## Companion plugins
 
 This kit runs alongside these plugins (installed separately):
@@ -76,7 +97,9 @@ This repo is both a marketplace and the plugin.
 agents/              # subagents (*.md)
 skills/              # auto-loaded skills (<name>/SKILL.md)
 commands/            # slash commands (*.md)
-# hooks/ scripts/  ← added later
+rules/               # opt-in always-on rules (@import from CLAUDE.md)
+hooks/               # mechanical guards (hooks.json + scripts)
+# scripts/  ← added later
 ```
 
 Adding more later: drop `hooks/`/`scripts/` dirs at root, bump `version` in both json files.
