@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "QT-claude-kit",
+  "version": "0.1.0",
+  "description": "Quentin's personal Claude Code kit.",
+  "owner": {
+    "name": "Quentin"
+  },
+  "plugins": [
+    {
+      "name": "QT-claude-kit",
+      "source": "./",
+      "description": "Specialized dev agents (e2e, refactor, docs, database, ts/js) plus future skills, commands, hooks, and scripts.",
+      "category": "development"
+    }
+  ]
+}
