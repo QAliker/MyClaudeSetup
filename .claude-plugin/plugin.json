@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "QT-claude-kit",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Quentin's personal Claude Code kit: specialized agents and skills (and later commands, hooks, scripts) for dev workflows.",
   "author": {
     "name": "Quentin"
