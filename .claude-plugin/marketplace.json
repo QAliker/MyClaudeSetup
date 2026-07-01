@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "QT-claude-kit",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "description": "Quentin's personal Claude Code kit.",
   "owner": {
     "name": "Quentin"
@@ -10,7 +10,7 @@
     {
       "name": "QT-claude-kit",
       "source": "./",
-      "description": "Specialized dev agents (e2e, refactor, docs, database, ts/js) plus future skills, commands, hooks, and scripts.",
+      "description": "Specialized dev agents (e2e, refactor, docs, database, ts/js) and skills (e2e-testing, database-migrations, web-security, javascript-typescript-security, backend-patterns, frontend-patterns, api-design, docker-patterns, js-ts-testing, postgres-patterns, deployment-patterns) plus future commands, hooks, and scripts.",
       "category": "development"
     }
   ]
