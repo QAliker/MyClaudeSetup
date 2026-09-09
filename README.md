@@ -79,14 +79,22 @@ This kit runs alongside these plugins (installed separately):
 This repo is both a marketplace and the plugin.
 
 ```bash
-# local (this machine)
-/plugin marketplace add ~/QT-claude-kit
+# any machine (from GitHub) — run one command at a time
+/plugin marketplace add https://github.com/QAliker/MyClaudeSetup.git
 /plugin install QT-claude-kit@QT-claude-kit
 
-# another machine (after pushing to GitHub)
-/plugin marketplace add <you>/QT-claude-kit
+# local dev (this machine, live-edits the checkout)
+/plugin marketplace add ~/MyClaudeSetup
 /plugin install QT-claude-kit@QT-claude-kit
 ```
+
+Update later:
+
+```bash
+/plugin marketplace update QT-claude-kit
+```
+
+Repo: https://github.com/QAliker/MyClaudeSetup
 
 ## Layout
 
