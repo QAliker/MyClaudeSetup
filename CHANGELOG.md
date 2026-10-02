@@ -19,6 +19,12 @@ field in `plugin.json` / `marketplace.json`.
 ### Changed
 - README companion plugins: `security-guidance` now from claude-plugins-official (duplicate claude-code-plugins copy removed); added `feature-dev`, `claude-md-management`, `claude-code-setup`, `typescript-lsp`, `playwright`, `context7` with their prerequisites; `impeccable` marked as global skills; documented how to refresh the installed kit.
 
+## 0.10.1 — 2026-09-09
+
+### Fixed
+- `plugin.json`: removed the `"hooks"` field; `hooks/hooks.json` is auto-loaded, so declaring it as well loaded the hooks twice.
+- README install section: GitHub URL for other machines, `~/MyClaudeSetup` for local dev, update command.
+
 ## 0.10.0 — 2026-07-01
 
 ### Added
