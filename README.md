@@ -18,7 +18,6 @@ Quentin's personal Claude Code kit. Portable plugin: agents, skills, commands, o
 | Command | Job |
 |---|---|
 | `/build-fix` | Fix build/compile errors — minimal fix, re-run until green |
-| `/code-review` | Read-only ranked review (bugs, security, quality) |
 | `/refactor-clean` | Dispatch `refactor-cleaner` to remove dead code safely |
 | `/update-docs` | Dispatch `doc-updater` to sync docs with code |
 | `/skill-create` | Author a new skill via the `writing-skills` TDD flow |
@@ -40,6 +39,10 @@ Auto-loaded by trigger; no manual invocation needed.
 | `frontend-patterns` | Structuring UI/component code — state, composition, when to abstract |
 | `docker-patterns` | Writing a Dockerfile / image build |
 | `deployment-patterns` | Shipping to prod — rollout, rollback, health, config |
+| `transitions-dev` / `transitions-polish` | Adding / tuning CSS transitions (from [transitions.dev](https://github.com/Jakubantalik/transitions.dev)) |
+| `gsap-*` (core, timeline, scrolltrigger, plugins, utils, react, frameworks, performance) | GSAP animation work (official [greensock/gsap-skills](https://github.com/greensock/gsap-skills)) |
+| `make-interfaces-feel-better` | UI polish / design-detail review (from [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better)) |
+| `graphify` | Codebase → knowledge graph, `/graphify .` (needs CLI: `uv tool install graphifyy`) |
 
 ## Rules (opt-in)
 
@@ -70,9 +73,18 @@ This kit runs alongside these plugins (installed separately):
 |---|---|---|
 | `caveman` | caveman | Terse "smart caveman" prose mode |
 | `ponytail` | ponytail | Lazy-senior-dev minimalism (YAGNI, shortest working diff) |
-| `security-guidance` | claude-code-plugins | Security hooks that warn on risky patterns |
+| `security-guidance` | claude-plugins-official | Security hooks that warn on risky patterns |
 | `superpowers` | claude-plugins-official | Skills framework (brainstorming, TDD, writing-skills, …) |
-| `impeccable` | impeccable | Frontend design — UI/visual design guidance |
+| `feature-dev` | claude-plugins-official | Guided feature dev + code-explorer/architect/reviewer agents |
+| `claude-md-management` | claude-plugins-official | Audit / update CLAUDE.md |
+| `claude-code-setup` | claude-plugins-official | Recommends hooks, skills, MCP servers for a repo |
+| `typescript-lsp` | claude-plugins-official | TS/JS diagnostics + code navigation (needs `npm i -g typescript typescript-language-server`) |
+| `playwright` | claude-plugins-official | Browser MCP: navigate, click, screenshot (needs Chrome: `npx playwright install chrome`; WSL/Linux also `sudo npx playwright install-deps chromium`). Add `.playwright-mcp/` to the project `.gitignore` |
+| `context7` | claude-plugins-official | Up-to-date library docs MCP |
+| `impeccable` | `npx skills add` (global skills, not a plugin) | Frontend design — UI/visual design guidance |
+
+After editing this repo, refresh the installed copy:
+`claude plugin marketplace update QT-claude-kit && claude plugin update QT-claude-kit@QT-claude-kit`
 
 ## Install
 
